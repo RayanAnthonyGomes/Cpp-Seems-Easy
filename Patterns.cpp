@@ -48,6 +48,45 @@ void Pattern_1(int n){
     
 }
 
+//Pattern 2:
+/*
+Pattern-2: Right-Angled Triangle Pattern
+Examples:
+
+Input Format: N = 6
+Result:
+* 
+* * 
+* * *
+* * * *
+* * * * *
+* * * * * *
+
+//In this particular loop we run the outer loop for "N" times and then 
+for the stars we give conditions which indicate that the star number 
+is same as the row number
+*/
+
+void Pattern_2(int n){
+    // Outer Loop: 
+    for (int i = 1; i <= n; i++)
+    {
+        //Inner Loop:
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    
+}
+
+//Pattern 3:
+/*
+    
+*/
+
+
 
 
 int main(){
@@ -61,6 +100,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_1(n);
+Pattern_2(n);
 
 }
