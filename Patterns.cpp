@@ -114,6 +114,40 @@ void Pattern_3(int n){
 }
 
 
+//Pattern 4:
+/*
+Input Format: N = 3
+Result: 
+1
+2 2 
+3 3 3
+
+Input Format: N = 6
+Result:
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+6 6 6 6 6 6
+
+This problem its just printing the i value? I guess so. Cuz When i = 1; its printing 1;
+next line when i = 2; its printing 2 2
+so we can probably say that j <= i and print the value of i each time
+
+*/
+void Pattern_4(int n){
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+    
+}
+
 int main(){
 //Creating an integer to store the input --> n
 
@@ -125,6 +159,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_3(n);
+Pattern_4(n);
 
 }
