@@ -254,6 +254,53 @@ void Pattern_7(int n){
     }
     
 }
+
+//Pattern 8:
+/*
+Pattern - 8: Inverted Star Pyramid
+Input Format: N = 6
+Result:     
+***********
+ *********
+  *******
+   ***** 
+    ***    
+     *
+
+In this problem we have the exact same thing but reversed.
+We have n = 5 which is basically saying outer loop runs for n times
+For the inner loop. Again we have spaces stars and spaces
+
+Spaces: its really easy. Its equavalent to the number of rows. i = 0 = space = 0
+        so space = i
+Stars: Previous one started with 1 star and icremented by 2
+        this one started with 9 and kept decrementing by 2
+        so we can 2n -(2*i + 1)
+*/
+void Pattern_8(int n){
+    for (int i = 0; i < n; i++)
+    {
+        //spaces:
+        for (int j = 0; j < i ; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2*n - (2*i + 1); j++)
+        {
+            cout << "*";
+        }
+        
+        //spaces:
+        for (int j = 0; j < i ; j++)
+        {
+            cout << " ";
+        }
+     cout << endl;   
+    }
+    
+}
+
+
 int main(){
 //Creating an integer to store the input --> n
 
@@ -265,6 +312,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_7(n);
+Pattern_8(n);
 
 }
