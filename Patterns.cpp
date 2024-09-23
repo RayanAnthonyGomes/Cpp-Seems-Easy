@@ -176,6 +176,36 @@ void Pattern_5(int n){
     }
     
 }
+
+//Pattern 6:
+/*
+Pattern - 6: Inverted Numbered Right Pyramid
+Input Format: N = 6
+Result:
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2 
+1
+
+In this problem we can say its exact same of the previous pattern.
+Instead of stars we are printing numbers 
+more specifically the i value
+
+*/
+void Pattern_6(int n){
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    
+}
+
 int main(){
 //Creating an integer to store the input --> n
 
@@ -187,6 +217,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_5(n);
+Pattern_6(n);
 
 }
