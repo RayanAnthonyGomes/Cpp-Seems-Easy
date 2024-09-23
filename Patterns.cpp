@@ -83,10 +83,35 @@ void Pattern_2(int n){
 
 //Pattern 3:
 /*
-    
+    Pattern - 3: Right-Angled Number Pyramid
+Example:
+
+Input Format: N = 6
+Result:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+
+Solution: For this particular problem, we have N rows. so i <=n
+          After that for the columns we are just printing the value of j which is basically the column number after incrementing
+          Hence, its really simple.
 */
 
-
+void Pattern_3(int n){
+    //Outer Loop:
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    
+}
 
 
 int main(){
@@ -100,6 +125,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_2(n);
+Pattern_3(n);
 
 }
