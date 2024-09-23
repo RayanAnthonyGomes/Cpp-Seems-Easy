@@ -300,6 +300,67 @@ void Pattern_8(int n){
     
 }
 
+//Pattern 9:
+/*
+Pattern - 9: Diamond Star Pattern
+Input Format: N = 6
+Result:   
+     *
+    ***
+   ***** 
+  *******
+ *********
+***********  
+***********
+ *********
+  *******
+   ***** 
+    ***    
+     *
+This is combination of pattern 7 and 8
+
+*/
+void pattern_9(int n){
+    for (int i = 0; i <= n; i++)
+    {
+        //Spaces
+        for (int j = 0; j <= n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        //Stars
+        for (int j = 0; j < (2*i + 1); j++)
+        {
+            cout << "*";
+        }
+        //Spaces
+        for (int j = 0; j <=n - i -1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+        
+    }
+     for (int i = 0; i < n; i++)
+    {
+        //spaces:
+        for (int j = 0; j < i ; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2*n - (2*i + 1); j++)
+        {
+            cout << "*";
+        }
+        
+        //spaces:
+        for (int j = 0; j < i ; j++)
+        {
+            cout << " ";
+        }
+     cout << endl;   
+    }
+}
 
 int main(){
 //Creating an integer to store the input --> n
@@ -312,6 +373,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_8(n);
+pattern_9(n);
 
 }
