@@ -206,6 +206,54 @@ void Pattern_6(int n){
     
 }
 
+//Pattern 7:
+/*
+Pattern - 7: Star Pyramid
+Input Format: N = 3
+Result: 
+  *  
+ *** 
+*****   
+Input Format: N = 6
+Result:
+     *     
+    ***    
+   *****   
+  *******  
+ ********* 
+***********
+for this problem:
+We have outer loop runs for N times
+Inner loop has 3 more loops. 2 for spaces and 1 for stars
+now we see that the number of spaces decrease from 4 3 2 1 0
+        for that we can have a formula like n - i - 1
+now we see that the stars are increasing by 2 , starting from 1
+        for that we can have a formula like 2i + 1
+
+*/
+void Pattern_7(int n){
+    for (int i = 0; i <= n; i++)
+    {
+        //Spaces
+        for (int j = 0; j <= n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        //Stars
+        for (int j = 0; j < (2*i + 1); j++)
+        {
+            cout << "*";
+        }
+        //Spaces
+        for (int j = 0; j <=n - i -1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+        
+    }
+    
+}
 int main(){
 //Creating an integer to store the input --> n
 
@@ -217,6 +265,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_6(n);
+Pattern_7(n);
 
 }
