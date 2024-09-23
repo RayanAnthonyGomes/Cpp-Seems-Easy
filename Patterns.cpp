@@ -113,7 +113,6 @@ void Pattern_3(int n){
     
 }
 
-
 //Pattern 4:
 /*
 Input Format: N = 3
@@ -148,6 +147,35 @@ void Pattern_4(int n){
     
 }
 
+//Pattern 5:
+/*
+Pattern-5: Inverted Right Pyramid
+Input Format: N = 6
+Result:
+* * * * * *
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+In this particular pattern, 
+We can say outer loops = n
+for the inner loops it prints stars. which are exact opposite of the total N
+SO we can say, that it prints stars like this: N - i; 
+Because N = 5; then for the first row i = 0; then 5-0 = 5; also same for the next ones
+*/
+void Pattern_5(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    
+}
 int main(){
 //Creating an integer to store the input --> n
 
@@ -159,6 +187,6 @@ cin >> n;
 
 //Showing output:
 
-Pattern_4(n);
+Pattern_5(n);
 
 }
