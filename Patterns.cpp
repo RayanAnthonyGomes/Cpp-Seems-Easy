@@ -438,6 +438,68 @@ void pattern_11(int n){
     }
     
 }
+
+///Pattern 12:
+/*
+Pattern - 12: Number Crown Pattern
+Input Format: N = 4
+Result:   
+1          1
+12        21
+12       321
+1234    4321
+
+
+
+Solution:
+So, in this particular problem, we have numbers spaces and numbers. 
+
+We can say that I will be running the outer looop for 4 times.
+for the first row we have 1 6 1, then 2 4 2 then 3 2 3 then 4 0 4 {numbers, spaces, numbers}
+
+//Outer Loop: It runs for N times; 
+//Inner Loop: 
+            //Numbers:
+            for (int j =1; j<=i;J++){
+            cout j
+            }
+            //Space:
+            We can say that it always reduce by two
+            Formula: 2 * (n -1)
+            Space = 2* (n-1) start integer
+
+            /numbers 
+            for(int j = i; j>=1; j--){ cout " "};
+
+            }} cout << endl; and lastly decrement spaces; space -=2;
+*/
+void pattern_12(int n){
+    int space = 2 * (n - 1);
+    for (int i = 1; i <= n; i++)
+    {
+        //Numbers:
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j;
+
+        }
+        //Spaces:
+        for (int j = 1; j <=space; j++)
+        {
+           cout << " ";
+        }
+        //Numbers Decremental Order
+        for (int j = i; j >= 1; j--)
+        {
+            cout << j;
+        }
+        cout << endl;
+        space -=2;
+
+        
+    }
+    
+}
 int main(){
 //Creating an integer to store the input --> n
 
@@ -449,6 +511,6 @@ cin >> n;
 
 //Showing output:
 
-pattern_10(n);
+pattern_12(n);
 
 }
