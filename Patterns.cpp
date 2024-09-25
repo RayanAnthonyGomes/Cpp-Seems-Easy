@@ -575,6 +575,45 @@ void pattern_14(int n){
     
     
 }
+//Pattern 15: 
+/*
+Pattern 15: reverse character triangle pattern
+Input Format: N = 6
+Result:   
+A B C D E F
+A B C D E 
+A B C D
+A B C
+A B
+A
+
+We can say its just the opposide version of the previous problem
+
+This time its the same row number
+hence the outer loop runs for n times
+
+for the inner loop:
+A (B C D E) A + 4   Formula stands like: A + (5 - 0 - 1)
+A (B C D)   A + 3                           'A' + (n - i - 1)
+A (B C)     A +2
+A (B)       A +1    
+A           A + 0
+
+
+*/
+
+
+void pattern_15(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (char j = 'A'; j <= 'A' + (n-i-1);j++)
+        {
+            cout << j;
+        }
+        cout << endl;
+    }
+    
+}
 
 int main(){
 //Creating an integer to store the input --> n
