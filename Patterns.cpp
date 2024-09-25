@@ -705,6 +705,38 @@ void pattern_17(int n){
 
 }
 
+//Pattern 18:
+/*
+Pattern 18: Alpha Triangle Pattern 
+
+Input Format: N = 6
+Result:   
+F
+E F
+D E F
+C D E F
+B C D E F
+A B C D E F
+
+//For this particular pattern we can say that it runs for N times ( Outer loop runs for N times) as usual,
+    But It starts kinda weirdly.
+//As we can see it starts from F when n = 6 and E when n=5;
+Now we can say that the conditions of the inner loops will be like this. J starts from E - i; and J is <= "E" and J++ <-- These are the conditions of the inner for loop and now we have to print the vaule of j 
+note to be taken that j is defined as a char datatype.
+
+*/
+
+void pattern_18(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (char j ='E' - i ; j <='E'; j++)
+        {
+            cout << j << " ";
+        }
+        cout <<endl;
+    }
+    
+}
 int main(){
 //Creating an integer to store the input --> n
 
