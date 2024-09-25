@@ -646,6 +646,64 @@ void pattern_16(int n){
         cout << endl;
         characters++;
     }
+}
+//Pattern 17:
+/*
+Pattern 17: Alpha hill pattern
+
+Input Format: N = 6
+Result:   
+     A     
+    ABA    
+   ABCBA   
+  ABCDCBA  
+ ABCDEDCBA 
+ABCDEFEDCBA
+
+// This is like a pattern we did before and we can steal the spaces from the previous too. the space formula was n - i - 1
+    We can also steal the row number and anyways its the same as N
+    We can steal the numbers formula = 2*i + 1
+    Lastly if we observe symmetry it breaks at half
+
+
+//For this particular problem, we needed to observe symmetry and we can say that its breaking at half.
+    Before we do any of the advanced things we need to set a char which starts from A
+    for that we can create a breakpoint which is basically the "CHARACTERS"/2. and if inner loop "J" is lesser or equal to breakpoint we do character++
+    and it its not we do character--
+
+*/
+
+void pattern_17(int n){
+    for (int i = 0; i < n; i++)
+    {
+        //Spaces
+        for (int j = 1; j <= n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        //Characters
+        char ch = 'A';
+        int breakpoint = (2*i + 1)/2;
+        
+        for (int j = 1;j<=2 * i + 1; j++)
+        {
+           
+            cout << ch;
+             if (j<=breakpoint){ch++;} else {ch--;}
+
+        }
+        
+
+        //Spaces
+        for (int j = 1; j <= n - i - 1; j++)
+        {
+            cout << " ";
+        }
+      cout << endl;
+    }
+    
+
+}
 
 int main(){
 //Creating an integer to store the input --> n
