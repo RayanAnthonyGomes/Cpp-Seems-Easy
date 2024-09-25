@@ -500,6 +500,47 @@ void pattern_12(int n){
     }
     
 }
+
+//Pattern 13:
+/*
+Pattern 13: Increasing number triangle pattern
+Input Format: N = 6
+Result:   
+1
+2  3
+4  5  6
+7  8  9  10
+11  12  13  14  15
+16  17  18  19  20  21
+
+For this particular problem;
+We have N rows. SO outer loop will be i<=n;
+Also the outer loop will run for the i ammount (row ammount)
+
+For the increasing numbers: We can say numbers start from 1 and then on every step it increases by 1;
+
+int numb = 1;
+then on the inner loop we can say; num +=1;
+
+
+*/
+
+void pattern_13(int n){
+    int num = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <=i; j++)
+        {
+            cout << num << " ";
+            num +=1;
+
+        }
+        cout << endl;
+    }
+    
+}
+
+
 int main(){
 //Creating an integer to store the input --> n
 
