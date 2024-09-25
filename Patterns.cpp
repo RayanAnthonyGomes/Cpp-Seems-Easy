@@ -539,7 +539,42 @@ void pattern_13(int n){
     }
     
 }
+//Pattern 14:
+/*
+Pattern 14: 
+Input Format: N =5
+Result:   
+A
+A B
+A B C
+A B C D
+A B C D E
 
+We can say its a right angle triangle and 
+//Outer Loop runs for N times
+//Inner loop we are printing characters instead of numbers
+
+on the inner loop its type is char and it starts form a and its condiditon will be it runs for <= A + i
+then we just print the values of the j
+
+*/
+
+void pattern_14(int n){
+    
+    for (int i = 0; i < n; i++)
+    {
+        for (char j = 'A'; j <= 'A' + i; j++)
+        {
+            cout << j;
+            
+        }
+        cout << endl;
+        
+
+    }
+    
+    
+}
 
 int main(){
 //Creating an integer to store the input --> n
