@@ -403,7 +403,41 @@ void pattern_10(int n){
     
 }
 
+//Pattern 11
+/*
+Input Format: N = 6
+Result:   
+1
+01
+101
+0101
+10101
+010101
 
+For the outer loop, it definitely runs for N times
+
+I can say that for all the even rows, It starts from 1;
+
+So, I am gonna create an integer named start = 1;
+and if row number i is divisible by two and its remainder is 0 we can put the value of start to 1 or else we set the start value to 0;
+but since its 1, then 01, then 101 we have to flip the value of start. We are using start = 1 - start;
+
+*/
+void pattern_11(int n){
+    int start = 1;
+    for (int i = 0; i <n; i++)
+    {
+        if(i%2==0){ start = 1;} else { start = 0;
+        }
+        for (int  j  = 0; j  <= i; j ++)
+        {
+            cout << start;
+            start = 1 -start;
+        }
+        cout << endl;
+    }
+    
+}
 int main(){
 //Creating an integer to store the input --> n
 
