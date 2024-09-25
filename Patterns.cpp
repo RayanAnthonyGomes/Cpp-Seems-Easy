@@ -615,6 +615,38 @@ void pattern_15(int n){
     
 }
 
+//Pattern 16:
+/*
+Alpha Ramp Pattern
+Input Format: N = 6
+Result:   
+A 
+B B
+C C C
+D D D D
+E E E E E
+F F F F F F
+
+I discovered it by mistake so i am gonna try to explain what i did
+I had to check it if it worked first.
+
+So for this particular solution:
+I assigned a char to 'A' Then i wrote a simple right angle triangle loop and printed out characters. 
+On the outer loop I created new line each time after executing and then i incremented the character value by 1
+
+*/
+void pattern_16(int n){
+    char characters = 'A';
+    for (int i = 0; i < n; i++)
+    {
+        for (char j = 0; j <= i; j++)
+        {
+            cout << characters;
+        }
+        cout << endl;
+        characters++;
+    }
+
 int main(){
 //Creating an integer to store the input --> n
 
