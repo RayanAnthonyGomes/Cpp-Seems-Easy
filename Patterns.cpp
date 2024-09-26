@@ -840,10 +840,6 @@ Also for the stars if i>n then on the 6th row we can se 2n-i working. LIke 2 x 5
 
 lastly if i > n; then sapaces tend to increase for that we wrote the if statement at the last.
 */
-
-
-
-
 void pattern_20(int n){
 int spaces = 2 * n - 2;
 for (int i = 1; i <= 2*n-1; i++)
@@ -876,6 +872,38 @@ for (int i = 1; i <= 2*n-1; i++)
 
 }
 
+
+
+//Pattern 21: 
+/*
+Pattern - 21: Hollow Rectangle Pattern
+Input Format: N = 6
+Result:   
+******
+*    *
+*    *
+*    *
+*    *
+******
+We are printing stars only on the boundaries and if i = 0; i = n-1; j = 0; j= n-1 then we print stars and otherwise we print spaces
+
+*/
+void pattern_21(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if(i==0 || i == n - 1 || j == 0 || j == n - 1){
+                cout << "*";
+
+            }else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    
+}
 int main(){
 //Creating an integer to store the input --> n
 
@@ -887,6 +915,6 @@ cin >> n;
 
 //Showing output:
 
-pattern_20(n);
+pattern_21(n);
 
 }
