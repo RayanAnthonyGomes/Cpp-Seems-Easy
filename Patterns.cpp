@@ -737,6 +737,86 @@ void pattern_18(int n){
     }
     
 }
+
+//Pattern 19:
+/*
+Pattern 19: Symmetric Void Pattern
+Input Format: N = 6
+Result:   
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+
+Solution: THis is a symmetrical Pattern. So we can divide this pattern into two parts.
+//Upper Part:
+For the upper part we can calculate the formulas via doing stars spaces and stars. Then we can say, for stars its printing (n-i) times and for the spaces it starts from 0 and increases by 2 each time.
+//Down Part:
+For the down part we can say its the complete opposite of the upper one. It has stars for i times and has spaces starting from 8 which decrease by 2 each time the code runs
+
+*/
+
+void pattern_19(int n){
+    int initialSpace = 0;
+    //Upper 
+    for (int i = 0; i < n; i++)
+    {
+        //Stars:
+        for (int j = 1; j <= n-i; j++)
+        {
+            cout << "*";
+        }
+        //Spaces:
+        for (int j = 0; j <= initialSpace; j++)
+        {
+            cout << " ";
+        }
+        
+        //Stars:
+        for (int j = 1; j <= n-i; j++)
+        {
+            cout << "*";
+        }
+        initialSpace += 2;
+        cout << endl;
+    }
+    initialSpace = 8;
+    //Down Part:
+    for (int i = 1; i <= n; i++)
+    {
+        //Stars:
+        for (int j = 1; j <= i; j++)
+        { 
+            cout << "*";
+        }
+        //Spaces:
+        for (int j = 0; j <= initialSpace; j++)
+        {
+            cout << " ";
+        }
+        
+        //Stars:
+        for (int j = 1; j <= i; j++)
+        { 
+            cout << "*";
+        }
+        initialSpace -= 2;
+        cout << endl;
+        
+    }
+    
+    
+}
+
+
 int main(){
 //Creating an integer to store the input --> n
 
@@ -748,6 +828,6 @@ cin >> n;
 
 //Showing output:
 
-pattern_12(n);
+pattern_19(n);
 
 }
