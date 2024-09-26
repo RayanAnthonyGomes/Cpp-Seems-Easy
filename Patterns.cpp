@@ -1,5 +1,13 @@
+/* **Author InforMation and Notes**
+    Rayan Anthony Gomes
+    Tutorial: Strivers DSA A2Z
+    Notes Link: https://www.evernote.com/shard/s428/sh/d3722f80-9c3c-b56a-28b0-1b4104f5c1c0/eFhKrzP7lLFs_9RWUAA918D-tApI8ngTjq-hm8DfDsi2F7L98D_G5zuPAQ    
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
+
 /*
                 ****NOTES BEFORE SOLVING PATTERNS****
 //I have implemented live input-output system on my Visual Studio Code.
