@@ -814,8 +814,67 @@ void pattern_19(int n){
     }
     
     
+
+}
+// Pattern - 20: Symmetric-Butterfly Pattern
+/*
+Input Format: N = 6
+Result:   
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+
+Solution: Its row number or outer loop is pretty simple. We have n =5; and rows = 9 so we can figure out the formula like (2n - 1)
+Then if we do stars spaces stars we can see on the 0th row its prinitng 1 star and 8 spaces after that spaces start to decrease till i = 5; and then it increases. when i>n
+Spaces = 2n-2; since 1st one is 8;
+after that, for the stars we can say its printing exactly the row number. For the 1st row it prints one star and 2nd prints 2 stars etc.
+Also for the stars if i>n then on the 6th row we can se 2n-i working. LIke 2 x 5 - 6 = 4; etc..
+
+lastly if i > n; then sapaces tend to increase for that we wrote the if statement at the last.
+*/
+
+
+
+
+void pattern_20(int n){
+int spaces = 2 * n - 2;
+for (int i = 1; i <= 2*n-1; i++)
+{
+    //Stars:
+    int stars = i;
+    if (i>n) stars = 2*n - i;
+    for (int j = 0; j < stars; j++)
+    {
+        cout << "*";
+    }
+    //Spaces:
+    for (int j = 0; j < spaces; j++)
+    {
+        cout << " ";
+        
+    }
+    //Stars:
+    for (int j = 0; j < stars; j++)
+    {
+        cout << "*";
+    }
+    cout << endl;
+    if (i<n){
+        spaces = spaces -2;
+    }else{
+        spaces = spaces + 2;
+    }
 }
 
+}
 
 int main(){
 //Creating an integer to store the input --> n
@@ -828,6 +887,6 @@ cin >> n;
 
 //Showing output:
 
-pattern_19(n);
+pattern_20(n);
 
 }
