@@ -872,8 +872,6 @@ for (int i = 1; i <= 2*n-1; i++)
 
 }
 
-
-
 //Pattern 21: 
 /*
 Pattern - 21: Hollow Rectangle Pattern
@@ -904,6 +902,47 @@ void pattern_21(int n){
     }
     
 }
+
+//Pattern 22:
+/*
+Pattern - 22: The Number Pattern
+
+Input Format: N = 6
+Result:   
+6 6 6 6 6 6 6 6 6 6 6 
+6 5 5 5 5 5 5 5 5 5 6 
+6 5 4 4 4 4 4 4 4 5 6 
+6 5 4 3 3 3 3 3 4 5 6 
+6 5 4 3 2 2 2 3 4 5 6 
+6 5 4 3 2 1 2 3 4 5 6 
+6 5 4 3 2 2 2 3 4 5 6 
+6 5 4 3 3 3 3 3 4 5 6 
+6 5 4 4 4 4 4 4 4 5 6 
+6 5 5 5 5 5 5 5 5 5 6 
+6 6 6 6 6 6 6 6 6 6 6
+
+
+This is a really hard pattern. 
+Solution: Notes are given above headers.
+*/
+void pattern_22(int n){
+    for (int i = 0; i < 2*n-1; i++)
+    {
+        for (int j = 0; j < 2*n-1; j++)
+        {
+            int top = i;
+            int bottom = (2*n - 2) - i;
+            int left = j;
+            int right = (2*n - 2) - j;
+            cout << n - min(min (top, bottom), min (left, right)) << " ";
+        }
+        cout << endl;
+    }
+    
+}
+
+
+
 int main(){
 //Creating an integer to store the input --> n
 
@@ -915,6 +954,6 @@ cin >> n;
 
 //Showing output:
 
-pattern_21(n);
+pattern_22(n);
 
 }
